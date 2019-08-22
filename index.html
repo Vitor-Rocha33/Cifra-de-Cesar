@@ -5,26 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cifra de Cesar</title>
 
-    
-</head>
-<body>
-    
     <!-- Links CSS Boostrap -->
     <link rel="stylesheet" href="css/bootstrap.css">
 
-    <!-- Links Bootstrap JS -->
-    <script src="scripts/bootstrap.js"></script>
-    <script src="scripts/jquery-3.2.1.slim.min.js"></script>
-    <script src="scripts/popper.min.js"></script>
-
     <!-- Links Style -->
     <link rel="stylesheet" href="css/style.css">
-
+</head>
+<body>
+    
+    <!-- Links JS -->
+    <script src="scripts/cifraCesarController.js"></script>
+    <script src="cifraCesar.js"></script>
+    
+    <!-- Links Bootstrap JS -->
+          
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+   
     <!-- Página -->
-    <div class="container-fluid">
-
-        <div class="row">
-            
+    <div class="container-fluid px-0">
+                    
             <div class="container-interno">
 
                 <div class="box p-2">
@@ -32,36 +33,44 @@
                         <div class="container">
                             <div class="d-block display-4">Cifra de César</div>
                         </div>
+
+                        <section class="mt-4">
+                            <div class="d-none d-md-block">
+                                <p>Em criptografia, a Cifra de César, também conhecida como cifra de troca, código
+                               de César ou troca de César, é uma das mais simples e conhecidas técnicas de 
+                               criptografia. É um tipo de cifra de substituição na qual cada letra do texto é 
+                               substituída por outra, que se apresenta no alfabeto abaixo dela um número fixo de 
+                               vezes.</p>
+                            </div>
+                            
+                        </section>
                         
-                        <section class="py-4">
+                        <section class="">
                             <div class="form-group row">
-                                <label for="staticTexto" class="col-sm-2 col-form-label">Digite seu texto:</label>
-                                    <div class="col-sm-10 d-flex justify-content-center align-itens-center">
-                                        <input type="text" class="form-control" id="staticTexto" placeholder="Texto">
+                                <label for="staticText" class="col-sm-12 col-form-label">Seu texto:</label>
+                                    <div class="col-sm-12 d-flex justify-content-center align-itens-center">
+                                        <input type="text" class="form-control" id="staticText" placeholder="Texto">
                                     </div>
                             </div>
-                            <div class="form-group row">
-                                <label for="inputPassword" class="col-sm-2 col-form-label">Deslocamento:</label>
-                                    <div class="col-sm-10">
-                                        <input type="number" class="form-control" id="inputPassword" placeholder="Deslocamento">
+                            <div class="py-0 form-group row">
+                                <label for="inputDesl" class="col-sm-12 col-form-label">Deslocamento:</label>
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control" id="inputDesl" name="deslocamento" pattern="[0-9]+$" min="0"
+                                        required="required"  placeholder="Deslocamento">
                                     </div>
                             </div>
                         </section>
                         
                         <section>
 
-                            <a name="" id="" class="btn btn-primary" href="#" role="button">Cifrar</a>
-                            <a name="" id="" class="btn btn-primary" href="#" role="button">Descifrar</a>
-
+                            <input class="btn btn-primary" type="submit" value="Cifrar">
+                            <input class="btn btn-primary" type="submit" value="Descifrar">
                         </section>
                         
                     </section>
                 </div>
 
             </div>            
-            
-        </div>
-        
 
     </div>
 
