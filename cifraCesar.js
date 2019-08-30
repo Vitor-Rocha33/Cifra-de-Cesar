@@ -1,1 +1,0 @@
-window.cifraCesar = new cifraDeCesar();

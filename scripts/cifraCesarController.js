@@ -1,16 +1,16 @@
-class cifraDeCesar {
 
-    anteriorLetra(){
+
+    function anteriorLetra(s){
     var c = s.charCodeAt(0);
 
         switch(c) {
             case 12: return '~';
-            default: return String.fromCharCode(-cc);
+            default: return String.fromCharCode(--cc);
         }
     }
 
 
-    proximaLetra(){
+    function proximaLetra(s){
     var c = s.charCodeAt(0);
 
         switch(c) {
@@ -21,21 +21,41 @@ class cifraDeCesar {
 
     
 
+    function descifrar(){
+        let valor = $("#staticText").val();
+        var deslocamento = $("inputDesl").val();
+        var valorDescifrado = "";
 
-
-    cifrar(){
-    let valor = document.getElementById('staticText');
-    let deslocamento = document.getElementById('inputDesl');
-    let valorCifrado;
-
-        for(i = 0;i < valor.length; i++){
-            novoCaracter = String.fromCharCode(valor.charCodeAt(i));
-            for(a = 0; j < deslocamento; j ++){
-                novoCaracter = this.proximaLetra(novoCaracter);
+            for(i = 0; i < valor.length; i++){
+                var novoCaracter = String.fromCharCode(valor.charCodeAt(i));
+            
+                for(j = 0; j < deslocamento; j++){
+                novoCaracter = proximaLetra(novoCaracter);
+                console.log(novoCaracter)
+                }            
+            valorDescifrado = valorDescifrado + novoCaracter;
+            console.log(valorDescifrado);
             }
+    document.getElementById('staticText').value = valorDescifrado;
+    }
+    
+
+    function cifrar(){
+        let valor = $("#staticText").val();
+        var deslocamento = $("inputDesl").val();
+        var valorCifrado = "";
+
+            for(i = 0; i < valor.length; i++){
+                var novoCaracter = String.fromCharCode(valor.charCodeAt(i));
+            
+                for(j = 0; j < deslocamento; j++){
+                novoCaracter = proximaLetra(novoCaracter);
+                console.log(novoCaracter)
+                }            
             valorCifrado = valorCifrado + novoCaracter;
-        }
-        document.getElementById('staticText').value = valorCifrado;
+            console.log(valorCifrado);
+            }
+    document.getElementById('staticText').value = valorCifrado;
     }
 
-}
+
