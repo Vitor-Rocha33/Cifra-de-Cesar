@@ -15,8 +15,7 @@
     
     <!-- Links JS -->
     <script src="scripts/cifraCesarController.js"></script>
-    <script src="cifraCesar.js"></script>
-    
+       
     <!-- Links Bootstrap JS -->
           
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -55,16 +54,15 @@
                             <div class="py-0 form-group row">
                                 <label for="inputDesl" class="col-sm-12 col-form-label">Deslocamento:</label>
                                     <div class="col-sm-12">
-                                        <input type="text" class="form-control" id="inputDesl" name="deslocamento" pattern="[0-9]+$" min="0"
+                                        <input type="text" class="form-control" id="inputDisplacement" name="deslocamento" pattern="[0-9]+$" min="0"
                                         required="required"  placeholder="Deslocamento">
                                     </div>
                             </div>
                         </section>
                         
                         <section>
-
-                            <input class="btn btn-primary" type="submit" value="Cifrar">
-                            <input class="btn btn-primary" type="submit" value="Descifrar">
+                            <input class="btn btn-primary" type="submit" value="Cifrar" onClick="encrypt(); return false">
+                            <input class="btn btn-primary" type="submit" value="Descifrar" onClick="decrypt(); return false">
                         </section>
                         
                     </section>
